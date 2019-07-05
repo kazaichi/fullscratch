@@ -13,7 +13,7 @@ def relu(x):
     return np.maximum(0, x)
 
 def leaky_relu(x):
-    alpha = 0.01
+    alpha = 0.01 #傾き
     return np.maximum(alpha * x, x)
 
 def softmax(a):
@@ -25,7 +25,7 @@ def softmax(a):
 if __name__=="__main__":
     import matplotlib.pylab as plt
     x = np.arange(-5.0, 5.0, 0.1)
-    y = leaky_relu(x)
+    y = leaky_relu(x) #デモ(関数を書き変えて選択)
     plt.plot(x, y)
     plt.ylim(-5.1, 5.1)
     plt.show()
